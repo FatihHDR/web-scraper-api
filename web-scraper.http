@@ -1,6 +1,0 @@
-@web_scraper_HostAddress = http://localhost:5077
-
-GET {{web_scraper_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
