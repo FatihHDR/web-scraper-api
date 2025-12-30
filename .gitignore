@@ -1,0 +1,55 @@
+# Build output
+/bin/
+/obj/
+**/bin/
+**/obj/
+/Debug/
+/Release/
+/publish/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider
+.idea/
+
+# NuGet
+*.nupkg
+packages/
+
+# Logs
+*.log
+
+# Test results
+TestResults/
+
+# Temporary files
+*.tmp
+*.temp
+
+# VS Code
+.vscode/
+
+# ASP.NET and node modules
+wwwroot/node_modules/
+
+# Local appsettings / secrets
+appsettings.Development.json
+secrets.json
+
+# Others
+*.dll
+*.exe
+*.pdb
+*.cache
+
+# Ignore published static web assets cache (build)
+**/*.dswa.cache.json
+
+# Ignore obj/ and bin/ generated in Debug folder under Debug/net* (if present)
+Debug/**/bin/
+Debug/**/obj/
