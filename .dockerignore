@@ -1,0 +1,39 @@
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Build results
+**/bin/
+**/obj/
+**/out/
+
+# Docker
+Dockerfile
+.dockerignore
+docker-compose*.yml
+
+# IDE
+.vs/
+.vscode/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Testing
+**/TestResults/
+**/*.trx
+
+# NuGet
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+
+# Misc
+*.log
+*.cache
+.DS_Store
+README.md
+LICENSE

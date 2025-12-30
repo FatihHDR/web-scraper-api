@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  web-scraper:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: web-scraper:latest
+    container_name: web-scraper-cli
+    # Interactive mode for CLI
+    stdin_open: true
+    tty: true
+    # Mount volume for output data (optional)
+    volumes:
+      - ./output:/app/output
+    # Override command with your scraping commands
+    # Example: command: ["navigate", "https://example.com"]
