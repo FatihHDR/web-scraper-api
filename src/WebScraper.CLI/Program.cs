@@ -68,7 +68,7 @@ try
             continue;
         }
 
-        var (parsedCommand, args) = parser.Parse(input);
+        var (parsedCommand, commandArgs) = parser.Parse(input);
 
         if (parsedCommand == null)
         {
@@ -85,7 +85,7 @@ try
 
         try
         {
-            var result = await parsedCommand.ExecuteAsync(browserService, args);
+            var result = await parsedCommand.ExecuteAsync(browserService, commandArgs);
 
             if (result.Success)
             {

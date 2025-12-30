@@ -88,8 +88,6 @@ public static class ConsoleHelper
     private static void WriteHtmlLine(string line)
     {
         var inTag = false;
-        var inAttribute = false;
-        var inAttributeValue = false;
 
         foreach (var c in line)
         {
@@ -106,20 +104,16 @@ public static class ConsoleHelper
                 Console.Write(c);
                 Console.ResetColor();
                 inTag = false;
-                inAttribute = false;
-                inAttributeValue = false;
             }
             else if (inTag && c == ' ')
             {
                 Console.Write(c);
-                inAttribute = true;
                 Console.ForegroundColor = ConsoleColor.Yellow;
             }
             else if (inTag && c == '=')
             {
                 Console.ForegroundColor = ConsoleColor.DarkGray;
                 Console.Write(c);
-                inAttributeValue = true;
                 Console.ForegroundColor = ConsoleColor.Green;
             }
             else if (inTag && (c == '"' || c == '\''))
